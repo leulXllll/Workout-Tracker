@@ -1,11 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,10 +16,44 @@ body{
 }
 .cont{
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 30px;
     height: 100px;
+    width: 250px;
     grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    background-color: azure;
+    grid-row: 3 / 5;
+    height: 200px;
+    background-color: slategray;
+    box-shadow: 2px 2px 1px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 2s;
+    color: white;
 
+}
+.cont:hover{
+    box-shadow: 2px 2px 2px black;
+}
+input,button{
+    padding: 7px;
+    border: none;
+    border-radius: 13px;
+    margin: 3px;
+}
+.cont form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    height: 140px;
+    align-items: center;
+}
+#sign_up{
+    margin: auto;
+    width: 50%;
+    display: block;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
 }

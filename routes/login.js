@@ -1,15 +1,15 @@
 const express = require('express');
-const router = express.Router();
 
+const {handleLogin} = require('../Controller/authControllers.js');
+
+const router = express.Router();
 
 router.get('/',(req,res)=>{
     
     res.sendFile(__dirname,'public','index.html');
 });
 
-router.post('/login',(req,res)=>{
-    res.send(req.body);
-})
+router.post('/login',handleLogin);
 
 
 module.exports = router;

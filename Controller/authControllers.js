@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 
-const handleLogin = (req,res,)=>{
+const handleLogin = (req,res)=>{
 
     const {username,password} = req.body;
 
@@ -37,5 +37,15 @@ const handleLogin = (req,res,)=>{
    
 }
 
-module.exports = {handleLogin};
+const verifyAuth = (req,res,next)=>{
+    
+    // const {} = req.headers;
+
+    // console.log(`headers hold info like ${req.headers.User-Agent}`);
+    console.log(`headers hold info like ${req}`);
+
+    // let verified = jwt
+}
+
+module.exports = {handleLogin,verifyAuth};
 
